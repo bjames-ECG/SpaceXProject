@@ -18,7 +18,7 @@ function App() {
 
   }, [])
 
-  const findOneLaunch = (missionName) => {
+  const findOneLaunch = (missionName:any) => {
     // console.log(missionName);
 
     const index = fetchedData.findIndex((data:any) => data.mission_name === missionName);
@@ -26,7 +26,7 @@ function App() {
     setProppedSingleLaunch(fetchedData[index]);
   }
 
-  const addFavorite = (missionName) => {
+  const addFavorite = (missionName:any) => {
     const index = fetchedData.findIndex((data:any) => data.mission_name === missionName);
 
     setFavorites([...favorites, fetchedData[index]]);
@@ -35,7 +35,7 @@ function App() {
   }
 
   const addFavoriteNotification= () => {
-    let snackbar = document.getElementById!("added-to-favorite");
+    let snackbar = document.getElementById("added-to-favorite");
 
     // Add the "show" class to DIV
     snackbar.className = "show";
@@ -46,7 +46,7 @@ function App() {
 
 
   const removeFavoriteNotification= () => {
-    let snackbar = document.getElementById!("removed-from-favorite");
+    let snackbar = document.getElementById("removed-from-favorite");
 
     // Add the "show" class to DIV
     snackbar.className = "show";
@@ -55,7 +55,7 @@ function App() {
     setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
   }
 
-  const removeFavorite = (missionName) => {
+  const removeFavorite = (missionName:any) => {
       let removedFavorite = favorites.filter((data:any) => data.mission_name !== missionName);
       setFavorites(removedFavorite);
       localStorage.setItem("Favorites", JSON.stringify(removedFavorite));
