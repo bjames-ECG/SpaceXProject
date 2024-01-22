@@ -17,7 +17,6 @@ const launchData = () => {
     setLoading(false);
   } catch (error) {
     setLoading(false);
-    setError('Error fetching data');
   }
 }
 
