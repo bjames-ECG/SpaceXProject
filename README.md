@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+Project Instructions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requirements:
 
-Currently, two official plugins are available:
+1. Fetch and display information on a single SpaceX launch.
+2. Fetch and display information on multiple SpaceX launches.
+3. Allow users to add a SpaceX launch to their favorites.
+4. Data should be persisted in `localStorage` to ensure data isn't lost on page refresh.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technical Stack:
 
-## Expanding the ESLint configuration
+- **Frontend**: React (using Vite)
+- **API**: [SpaceX-API](https://github.com/r-spacex/SpaceX-API) (no api key required for queries)
+- **Deployment**: Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Steps:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. **Setup**:
+    - Initialize a new Vite project with React and TypeScript: `npm init vite@latest -- --template react-ts`
+2. **API Consumption**:
+    - Fetch data from the SpaceX-API to get details on launches.
+    - Implement the necessary logic to handle GET requests for 1 item, many items, and adding an item to the local storage list.
+3. **Local Storage Integration**:
+    - Use the browser's `localStorage` API to store and manage the user's list of favorite SpaceX launches.
+4. **React Components**:
+    - Implement the three main components (`SingleItem`, `ItemsList`, and `FavoritesList`) using the fetched data and integrate the `localStorage` logic.
+    - Use React hooks like `useState` and `useEffect` for state management and side effects respectively.
+5. **Styling**:
+    - Use CSS or any preferred styling library to style the components.
+    - Make sure the application is responsive.
+6. **Deployment**:
+    - Deploy the application to Vercel. Follow the [official Vercel documentation](https://vercel.com/docs) to set up deployment.
+7. **Documentation**:
+    - Document any assumptions or decisions you've made during the development.
