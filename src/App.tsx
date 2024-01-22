@@ -26,40 +26,40 @@ function App() {
     setProppedSingleLaunch(fetchedData[index]);
   }
 
-  const addFavorite = (missionName:any) => {
+  const addFavorite = (missionName) => {
     const index = fetchedData.findIndex((data) => data.mission_name === missionName);
 
     setFavorites([...favorites, fetchedData[index]]);
 
-    addFavoriteNotification();
+    // addFavoriteNotification();
   }
 
-  const addFavoriteNotification= () => {
-    let snackbar = document.getElementById("added-to-favorite");
+  // const addFavoriteNotification= () => {
+  //   let snackbar = document.getElementById("added-to-favorite");
 
-    // Add the "show" class to DIV
-    snackbar.className = "show";
+  //   // Add the "show" class to DIV
+  //   snackbar.className = "show";
   
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
-  }
+  //   // After 3 seconds, remove the show class from DIV
+  //   setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+  // }
 
 
-  const removeFavoriteNotification= () => {
-    let snackbar = document.getElementById("removed-from-favorite");
+  // const removeFavoriteNotification= () => {
+  //   let snackbar = document.getElementById("removed-from-favorite");
 
-    // Add the "show" class to DIV
-    snackbar.className = "show";
+  //   // Add the "show" class to DIV
+  //   snackbar.className = "show";
   
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
-  }
+  //   // After 3 seconds, remove the show class from DIV
+  //   setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+  // }
 
   const removeFavorite = (missionName) => {
       let removedFavorite = favorites.filter((data) => data.mission_name !== missionName);
       setFavorites(removedFavorite);
       localStorage.setItem("Favorites", JSON.stringify(removedFavorite));
-      removeFavoriteNotification();
+      // removeFavoriteNotification();
     }
 
 
