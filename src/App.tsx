@@ -9,8 +9,8 @@ function App() {
   const [fetchedData, setFetchedData] = useState<object>({});
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<object>({});
-  const [favorites, setFavorites] = useState<array>([]);
+  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<any>({});
+  const [favorites, setFavorites] = useState<any>([]);
   // const [flightId, setFlightId] = useState[''];
 
   useEffect(() => {
