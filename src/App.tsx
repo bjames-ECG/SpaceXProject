@@ -19,17 +19,15 @@ function App() {
   }, [])
 
   const findOneLaunch = (missionName) => {
-    console.log(missionName);
+    // console.log(missionName);
 
-    const index = fetchedData.findIndex(data => data.mission_name === missionName);
-
-    // console.log(index);
+    const index = fetchedData.findIndex((data:any) => data.mission_name === missionName);
 
     setProppedSingleLaunch(fetchedData[index]);
   }
 
   const addFavorite = (missionName) => {
-    const index = fetchedData.findIndex(data => data.mission_name === missionName);
+    const index = fetchedData.findIndex((data:any) => data.mission_name === missionName);
 
     setFavorites([...favorites, fetchedData[index]]);
 
@@ -58,7 +56,7 @@ function App() {
   }
 
   const removeFavorite = (missionName) => {
-      let removedFavorite = favorites.filter(data => data.mission_name !== missionName);
+      let removedFavorite = favorites.filter((data:any) => data.mission_name !== missionName);
       setFavorites(removedFavorite);
       localStorage.setItem("Favorites", JSON.stringify(removedFavorite));
       removeFavoriteNotification();
@@ -75,8 +73,6 @@ function App() {
       let storage = JSON.parse(localStorage.getItem("Favorites"));
       if (storage !== null) setFavorites(storage);
 
-
-      // console.log("FAVORITES ON INITIAL FETCH: ", favorites);
       setLoading(false);
       console.log("DATA SET: ", fetchedData)
     } catch (error) {
