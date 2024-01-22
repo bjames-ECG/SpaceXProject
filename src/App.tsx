@@ -101,7 +101,7 @@ function App() {
         <ItemsList
           fetchedData={fetchedData}
           findOneLaunch={findOneLaunch}
-          proppedSingleLaunch={proppedSingleLaunch}
+          // proppedSingleLaunch={proppedSingleLaunch}
         />
         <FavoriteItems
           favorites={favorites}

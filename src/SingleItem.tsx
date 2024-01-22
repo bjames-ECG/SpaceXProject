@@ -33,7 +33,7 @@ const launchData = () => {
       <>
         <div id="outer-container">
         <div id='single-item-individual-launch' key={proppedSingleLaunch.mission_name}>
-        {(!favorites.filter(data => data.mission_name === proppedSingleLaunch.mission_name).length > 0) && <button onClick={() => addFavorite(proppedSingleLaunch.mission_name)}>Favorite</button>}
+        {(!favorites.filter(data => data.mission_name === proppedSingleLaunch.mission_name).length) && <button onClick={() => addFavorite(proppedSingleLaunch.mission_name)}>Favorite</button>}
             <div><span id="label-text-font">Flight Number</span>: {proppedSingleLaunch.flight_number}</div>
             <div><span id="label-text-font">Mission Name</span>: {proppedSingleLaunch.mission_name}</div>
             <div><span id="label-text-font">Flight Details</span>: {proppedSingleLaunch.details}</div>
