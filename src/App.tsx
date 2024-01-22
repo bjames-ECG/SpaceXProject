@@ -35,7 +35,7 @@ function App() {
   }
 
   const addFavoriteNotification= () => {
-    let snackbar = document.getElementById("added-to-favorite");
+    let snackbar = document.getElementById!("added-to-favorite");
 
     // Add the "show" class to DIV
     snackbar.className = "show";
@@ -46,7 +46,7 @@ function App() {
 
 
   const removeFavoriteNotification= () => {
-    let snackbar = document.getElementById("removed-from-favorite");
+    let snackbar = document.getElementById!("removed-from-favorite");
 
     // Add the "show" class to DIV
     snackbar.className = "show";
