@@ -18,16 +18,16 @@ function App() {
 
   }, [])
 
-  const findOneLaunch = (missionName:any) => {
+  const findOneLaunch = (missionName) => {
     // console.log(missionName);
 
-    const index = fetchedData.findIndex((data:any) => data.mission_name === missionName);
+    const index = fetchedData.findIndex((data) => data.mission_name === missionName);
 
     setProppedSingleLaunch(fetchedData[index]);
   }
 
   const addFavorite = (missionName:any) => {
-    const index = fetchedData.findIndex((data:any) => data.mission_name === missionName);
+    const index = fetchedData.findIndex((data) => data.mission_name === missionName);
 
     setFavorites([...favorites, fetchedData[index]]);
 
@@ -55,8 +55,8 @@ function App() {
     setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
   }
 
-  const removeFavorite = (missionName:any) => {
-      let removedFavorite = favorites.filter((data:any) => data.mission_name !== missionName);
+  const removeFavorite = (missionName) => {
+      let removedFavorite = favorites.filter((data) => data.mission_name !== missionName);
       setFavorites(removedFavorite);
       localStorage.setItem("Favorites", JSON.stringify(removedFavorite));
       removeFavoriteNotification();
