@@ -1,4 +1,4 @@
-.individual-launch {
+#individual-launch {
     outline: 5px solid rgb(0, 0, 0);
     margin: 5px;
     padding: 5px;
@@ -13,12 +13,12 @@
     align-items: center;
 }
 
-.launches-list {
+#launches-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-.all-launches-box {
+#all-launches-box {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -29,7 +29,7 @@
     width: 100%;
 }
 
-.items-list-outer-container {
+#items-list-outer-container {
     display: grid;
     width: 500px;
     height: 100%;
@@ -39,23 +39,18 @@
     padding: 10px;
 }
 
-.individual-launch:hover {
+#individual-launch:hover {
     transform: scale(.9);
     background-color:rgba(0,0,0,0.5);
 
 }
 
-.label-text-font {
+#label-text-font {
     font-style: italic;
     text-decoration: underline;
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: center; */
-}
-
-.mission-name-text {
-
-
 }
 
 

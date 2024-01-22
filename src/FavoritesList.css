@@ -1,4 +1,4 @@
-.outer-container {
+#outer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     padding: 10px;
 }
 
-.favorites-individual-launch {
+#favorites-individual-launch {
     outline: 5px solid rgb(0, 0, 0);
     margin: 5px;
     padding: 5px;

@@ -13,13 +13,13 @@ function ItemsList({ fetchedData, findOneLaunch }) {
     return (
       <>
       {/* <SingleItem proppedData={proppedSingleLaunch}/> */}
-        <div className="items-list-outer-container">
+        <div id="items-list-outer-container">
         <div>Choose a Mission Name</div>
-        <div className="all-launches-box">
-          <div className="launches-list">
+        <div id="all-launches-box">
+          <div id="launches-list">
           {fetchedData.map((data) => (
-                <div className='individual-launch' key={data.mission_name} onClick={() => findOneLaunch(data.mission_name)}>
-                    <div className="mission-name-text">{data.mission_name}</div>   
+                <div id='individual-launch' key={data.mission_name} onClick={() => findOneLaunch(data.mission_name)}>
+                    <div id="mission-name-text">{data.mission_name}</div>   
                 </div>
             ))}
             </div>
