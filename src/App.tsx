@@ -3,15 +3,14 @@ import './App.css'
 import SingleItem from './SingleItem'
 import FavoriteItems from './FavoritesList'
 import ItemsList from './ItemsList'
-import RandomItem from './RandomItem'
 
 function App() {
 
-  const [fetchedData, setFetchedData] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [proppedSingleLaunch, setProppedSingleLaunch] = useState({});
-  const [favorites, setFavorites] = useState([]);
+  const [fetchedData, setFetchedData] = useState<object>({});
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<object>({});
+  const [favorites, setFavorites] = useState<array>([]);
   // const [flightId, setFlightId] = useState[''];
 
   useEffect(() => {
@@ -24,7 +23,7 @@ function App() {
 
     const index = fetchedData.findIndex(data => data.mission_name === missionName);
 
-    console.log(index);
+    // console.log(index);
 
     setProppedSingleLaunch(fetchedData[index]);
   }
