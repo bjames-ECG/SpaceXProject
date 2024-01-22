@@ -93,17 +93,17 @@ function App() {
   return (
     <>
       <div id="page-container">
-        <SingleItem id="single-item"
+        <SingleItem
           proppedSingleLaunch={proppedSingleLaunch} 
           addFavorite={addFavorite}
           favorites={favorites}
         />
-        <ItemsList id="items-list"
+        <ItemsList
           fetchedData={fetchedData}
           findOneLaunch={findOneLaunch}
           proppedSingleLaunch={proppedSingleLaunch}
         />
-        <FavoriteItems id="favorite-items"
+        <FavoriteItems
           favorites={favorites}
           removeFavorite={removeFavorite}
           />
