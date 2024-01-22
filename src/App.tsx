@@ -6,9 +6,9 @@ import ItemsList from './ItemsList'
 
 function App() {
 
-  const [fetchedData, setFetchedData] = useState<object>({});
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
+  const [fetchedData, setFetchedData] = useState<any>({});
+  const [loading, setLoading] = useState<any>(false);
+  const [error, setError] = useState<any>("");
   const [proppedSingleLaunch, setProppedSingleLaunch] = useState<any>({});
   const [favorites, setFavorites] = useState<any>([]);
   // const [flightId, setFlightId] = useState[''];
