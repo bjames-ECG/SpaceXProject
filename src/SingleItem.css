@@ -1,0 +1,21 @@
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    /* width: 75%;
+    height: 100%; */
+    /* outline: 5px solid rgb(0, 0, 0); */
+    margin: 10 px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.single-item-individual-launch {
+    outline: 5px solid rgb(0, 0, 0);
+    margin: 5px;
+    padding: 5px;
+    gap: 10px;
+    width: 90%;
+    max-height: 500px;
+    overflow: auto;
+    border-radius: 50px;
+}
