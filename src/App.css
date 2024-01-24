@@ -7,6 +7,13 @@
 
 #page-container {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+.bottom-information {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   /* padding: 10px;
@@ -70,4 +77,37 @@
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
+}
+
+.background {
+  background-image: url("./assets/space-x-image-1.jpeg");
+  animation: chbg 40s infinite alternate;
+  background-size: cover;
+}
+
+@keyframes chbg {
+  0% {
+    background:url("./assets/space-x-image-2.webp");
+  background-size:cover
+  }
+  20% {
+    background:url("./assets/space-x-image-3.jpeg");
+  background-size:cover
+  }
+  40% {
+    background:url("./assets//space-x-image-4.webp");
+  background-size:cover
+  }
+  60% {
+    background:url("./assets/space-x-image-5.webp");
+  background-size:cover
+  }
+  80% {
+    background:url("./assets//space-x-image-1.jpeg");
+  background-size:cover
+  }
+  100% {
+    background:url("./assets/space-x-image-2.webp");
+  background-size:cover
+  }
 }

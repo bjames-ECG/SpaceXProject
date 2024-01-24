@@ -2,7 +2,6 @@
     outline: 5px solid rgb(0, 0, 0);
     margin: 5px;
     padding: 5px;
-    /* gap: 10px; */
     width: 100px;
     height: 100px;
     overflow: auto;
@@ -11,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(215, 136, 17);
 }
 
 #launches-list {
@@ -33,7 +33,7 @@
     display: grid;
     width: 500px;
     height: 100%;
-    outline: 5px solid rgb(0, 0, 0);
+    /* outline: 5px solid rgb(0, 0, 0); */
     margin: 10 px;
     gap: 10px;
     padding: 10px;

@@ -8,6 +8,7 @@
     margin: 10 px;
     gap: 10px;
     padding: 10px;
+    
 }
 
 #favorites-individual-launch {
@@ -19,4 +20,6 @@
     height: fit-content;
     overflow: auto;
     border-radius: 50px;
+    background-color: rgb(215, 136, 17);
+
 }

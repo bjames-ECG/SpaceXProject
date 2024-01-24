@@ -3,8 +3,6 @@ import "./FavoritesList.css";
 
 function FavoritesList({ favorites, removeFavorite }) {
 
-  // console.log("favorites from favorites list app: ", favorites)
-
   useEffect(() => {
     if (favorites.length > 0) localStorage.setItem("Favorites", JSON.stringify(favorites));
 
@@ -18,7 +16,7 @@ function FavoritesList({ favorites, removeFavorite }) {
     return (
       <>
         <div id="outer-container">
-          Favorites
+          Saved Favorites
         <div id="all-launches-box">
           {favorites && favorites.map((data) => (
                 <div id='favorites-individual-launch' key={data.mission_name}>

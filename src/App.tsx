@@ -19,8 +19,6 @@ function App() {
   }, [])
 
   const findOneLaunch = (missionName) => {
-    // console.log(missionName);
-
     const index = fetchedData.findIndex((data) => data.mission_name === missionName);
 
     setProppedSingleLaunch(fetchedData[index]);
@@ -91,27 +89,32 @@ function App() {
   }
 
   return (
-    <>
+    <div className="background">
       <div id="page-container">
-        <SingleItem
-          proppedSingleLaunch={proppedSingleLaunch} 
-          addFavorite={addFavorite}
-          favorites={favorites}
-        />
-        <ItemsList
-          fetchedData={fetchedData}
-          findOneLaunch={findOneLaunch}
-          // proppedSingleLaunch={proppedSingleLaunch}
-        />
-        <FavoriteItems
-          favorites={favorites}
-          removeFavorite={removeFavorite}
+        <div className='page-title'>
+          <div>Space-X Launches</div>
+        </div>
+        <div className="bottom-information">
+          <SingleItem
+            proppedSingleLaunch={proppedSingleLaunch} 
+            addFavorite={addFavorite}
+            favorites={favorites}
           />
-        {/* <RandomItem /> */}
+          <ItemsList
+            fetchedData={fetchedData}
+            findOneLaunch={findOneLaunch}
+            // proppedSingleLaunch={proppedSingleLaunch}
+          />
+          <FavoriteItems
+            favorites={favorites}
+            removeFavorite={removeFavorite}
+            />
+          {/* <RandomItem /> */}
+        </div>
+        <div id="added-to-favorite">Added to Favorites</div>
+        <div id="removed-from-favorite">Removed from Favorites</div>
       </div>
-      <div id="added-to-favorite">Added to Favorites</div>
-      <div id="removed-from-favorite">Removed from Favorites</div>
-    </>
+    </div>
   )
 }
 
