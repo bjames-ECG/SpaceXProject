@@ -10,6 +10,11 @@ function FavoritesList({ favorites, removeFavorite }) {
 
   }, [favorites]);
 
+  const dateConverter = (utcDate) => {
+    console.log(new Date(utcDate))
+    return new Date(utcDate).toDateString()
+  }
+
     return (
       <>
         <div id="outer-container">
@@ -21,7 +26,7 @@ function FavoritesList({ favorites, removeFavorite }) {
                     <div><span id="label-text-font">Flight Number</span>: {data.flight_number}</div>
                     <div><span id="label-text-font">Mission Name</span>: {data.mission_name}</div>
                     <div><span id="label-text-font">Flight Details</span>: {data.details}</div>
-                    <div><span id="label-text-font">Launch Date</span>: {data.launch_date_local}</div>
+                    <div><span id="label-text-font">Launch Date</span>: {dateConverter(data.launch_date_local)}</div>
                     <div><span id="label-text-font">Launch Site Name</span>: {data.launch_site.site_name}</div>
                     {data.launch_success === true && <div id="label-text-font">Launch was successful</div>}
                     {data.launch_success === false && 
