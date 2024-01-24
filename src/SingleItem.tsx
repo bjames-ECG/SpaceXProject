@@ -7,6 +7,8 @@ function SingleItem({ proppedSingleLaunch, addFavorite, favorites }) {
 
   const [loading, setLoading] = useState(false);
 
+  console.log("PROPPED: ", proppedSingleLaunch)
+
   useEffect(() => {
     launchData();
 }, [])
@@ -19,6 +21,13 @@ const launchData = () => {
     setLoading(false);
   }
 }
+
+const dateConverter = (utcDate) => {
+  console.log(new Date(utcDate))
+  return new Date(utcDate).toDateString()
+}
+
+
 
   if (loading) {
     return <>Loading. . .</>
@@ -37,7 +46,8 @@ const launchData = () => {
             <div><span id="label-text-font">Flight Number</span>: {proppedSingleLaunch.flight_number}</div>
             <div><span id="label-text-font">Mission Name</span>: {proppedSingleLaunch.mission_name}</div>
             <div><span id="label-text-font">Flight Details</span>: {proppedSingleLaunch.details}</div>
-            <div><span id="label-text-font">Launch Date</span>: {proppedSingleLaunch.launch_date_local}</div>
+            <div><span id="label-text-font">Launch Date</span>: {dateConverter(proppedSingleLaunch.launch_date_local)}</div>
+            {/* <div><span id="label-text-font">Launch Date</span>: {proppedSingleLaunch.launch_date_local}</div> */}
             {proppedSingleLaunch.launch_success === true && <div id="label-text-font">Launch was successful</div>}
             {proppedSingleLaunch.launch_success === false && 
             <div>
