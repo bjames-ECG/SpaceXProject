@@ -87,7 +87,7 @@
 
 @keyframes chbg {
   0% {
-    background:url("./assets/space-x-image-2.webp");
+    background:url("./assets/space-x-image-1.jpeg");
   background-size:cover
   }
   20% {
@@ -95,19 +95,19 @@
   background-size:cover
   }
   40% {
-    background:url("./assets//space-x-image-4.webp");
+    background:url("./assets/space-x-image-6.jpeg");
   background-size:cover
   }
   60% {
-    background:url("./assets/space-x-image-5.webp");
+    background:url("./assets/space-x-image-7.jpeg");
   background-size:cover
   }
   80% {
-    background:url("./assets//space-x-image-1.jpeg");
+    background:url("./assets/space-x-image-8.jpeg");
   background-size:cover
   }
   100% {
-    background:url("./assets/space-x-image-2.webp");
+    background:url("./assets/space-x-image-3.jpeg");
   background-size:cover
   }
 }
