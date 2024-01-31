@@ -80,7 +80,7 @@
 }
 
 .background {
-  background-image: url("./assets/space-x-image-1.jpeg");
+  background-color: black;
   animation: chbg 40s infinite alternate;
   background-size: cover;
 }
