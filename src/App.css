@@ -80,14 +80,14 @@
 }
 
 .background {
-  background-color: black;
+  background: url("./assets/space-x-image-1.jpeg");
   animation: chbg 40s infinite alternate;
-  background-size: cover;
+  background-size: auto;
 }
 
 @keyframes chbg {
   0% {
-    background:url("./assets/space-x-image-1.jpeg");
+  background:url("./assets/space-x-image-1.jpeg");
   background-size:cover
   }
   20% {

@@ -8,8 +8,9 @@ function FavoritesList({ favorites, removeFavorite }) {
 
   }, [favorites]);
 
+  //function used to convert the date format from the fetched utc version to a more readable format
   const dateConverter = (utcDate) => {
-    console.log(new Date(utcDate))
+    // console.log(new Date(utcDate))
     return new Date(utcDate).toDateString()
   }
 

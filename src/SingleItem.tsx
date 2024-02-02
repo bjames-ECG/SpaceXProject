@@ -7,7 +7,7 @@ function SingleItem({ proppedSingleLaunch, addFavorite, favorites }) {
 
   const [loading, setLoading] = useState(false);
 
-  console.log("PROPPED: ", proppedSingleLaunch)
+  // console.log("PROPPED: ", proppedSingleLaunch)
 
   useEffect(() => {
     launchData();
@@ -23,7 +23,7 @@ const launchData = () => {
 }
 
 const dateConverter = (utcDate) => {
-  console.log(new Date(utcDate))
+  // console.log(new Date(utcDate))
   return new Date(utcDate).toDateString()
 }
 

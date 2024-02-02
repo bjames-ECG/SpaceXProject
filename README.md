@@ -30,5 +30,17 @@ Project Instructions
     - Make sure the application is responsive.
 6. **Deployment**:
     - Deploy the application to Vercel. Follow the [official Vercel documentation](https://vercel.com/docs) to set up deployment.
-7. **Documentation**:
-    - Document any assumptions or decisions you've made during the development.
+
+
+7. **Additional Notes**
+    - The project as it currently stands is written as a Javascript react project, with the intent to be converted over to a Typescript focused project as I am learning the syntax of TS. The App file functions as the parent component and passes props down to the rest of the child components, namely SingleItem, FavoritesList, and ItemsList. As I was adding in the requested componenets, I worked to keep App as the primary disperser of the fetched data.
+    - Self Diagnosed areas of improvement include:
+        - There is a flickering that occurs on the loading of some of the background rocket images. Possibly could be fixed with altering the CSS, or performing the slideshow effect using Javascript/TS instead of CSS.
+        - Currently it is not mobile friendly (by default). It can be adjusted manually to fit a phone screen. Additional layout contraints via CSS need to be added to account for mobile users.
+        - Efficiency is always an area of improvement. Multiple instances of using similar/same conditional logic to display compononent divs can be condensed to reduce code cluttrer
+
+    - Items to add:
+        - Fix the toast notification when adding or removing a favorite from the favorites list
+        - Add a random launch component that will fetch a random launch from the list
+        - Display additional information, possibly as part of an additional modal, or navigating to another url setup. I picked out only some of the available information present from the fetched data. Full details of the fetched data could be added. The links to additional sources in particular would be an interesting addition.
+        - More detailed CSS/Layout!
