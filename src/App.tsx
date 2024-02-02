@@ -89,7 +89,7 @@ function App() {
       if (storage !== null) setFavorites(storage);
 
       setLoading(false);
-      console.log("DATA SET: ", fetchedData)
+      // console.log("DATA SET: ", fetchedData)
     } catch (error) {
       setLoading(false);
       setError('Error fetching data');
