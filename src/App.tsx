@@ -8,28 +8,27 @@ function App() {
 
   const [fetchedData, setFetchedData] = useState<{
     mission_name: string;
-    mission_id: integer;
-    launch_date_local: string;
-    launch_site: string;
-    launch_success: boolean;
-    details: string;
-    launch_site: {
-      site_name: string
-    }
+    // mission_id: integer;
+    // launch_date_local: string;
+    // launch_site: string;
+    // launch_success: boolean;
+    // details: string;
+    // launch_site: {
+    //   site_name: string
+    // }
   }>({});
 
   const [proppedSingleLaunch, setProppedSingleLaunch] = useState<{
     mission_name: string;
     mission_id: integer;
     launch_date_local: string;
-    launch_site: string;
+    launch_site: {
+      site_name: string;
+    };
     launch_success: boolean;
     details: string;
-    launch_site: {
-      site_name: string
-    }
   }>({});
-  
+
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
   const [favorites, setFavorites] = useState<Array>([]);
