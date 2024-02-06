@@ -42,9 +42,10 @@ function App() {
 
 
   const addFavorite = (missionName : string) => {
-    const index = fetchedData.findIndex((data) => data.mission_name === missionName);
-    setFavorites([...favorites, fetchedData[index]]);
-
+    if (fetchedData) {
+      const index = fetchedData.findIndex((data) => data.mission_name === missionName);
+      setFavorites([...favorites, fetchedData[index]]);
+    }
     // addFavoriteNotification();
   }
 
