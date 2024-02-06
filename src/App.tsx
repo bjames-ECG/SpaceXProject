@@ -6,14 +6,13 @@ import ItemsList from './ItemsList'
 
 interface Data {
   mission_name: string;
-  mission_id: integer;
+  mission_id: number;
   launch_date_local: string;
   launch_success: boolean;
   details: string;
   launch_site: {
     site_name: string
   }
-
 }
 
 function App() {
