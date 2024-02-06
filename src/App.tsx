@@ -4,34 +4,28 @@ import SingleItem from './SingleItem'
 import FavoriteItems from './FavoritesList'
 import ItemsList from './ItemsList'
 
+interface Data {
+  mission_name: string;
+  mission_id: integer;
+  launch_date_local: string;
+  launch_site: string;
+  launch_success: boolean;
+  details: string;
+  launch_site: {
+    site_name: string
+  }
+
+}
+
 function App() {
 
-  const [fetchedData, setFetchedData] = useState<{
-    mission_name: string;
-    // mission_id: integer;
-    // launch_date_local: string;
-    // launch_site: string;
-    // launch_success: boolean;
-    // details: string;
-    // launch_site: {
-    //   site_name: string
-    // }
-  }>({});
+  const [fetchedData, setFetchedData] = useState<Data | {}>({})
 
-  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<{
-    mission_name: string;
-    mission_id: integer;
-    launch_date_local: string;
-    launch_site: {
-      site_name: string;
-    };
-    launch_success: boolean;
-    details: string;
-  }>({});
+  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<Data | {}>({});
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const [favorites, setFavorites] = useState<Array>([]);
+  const [favorites, setFavorites] = useState<any>([]);
 
   useEffect(() => {
     fetchData();
