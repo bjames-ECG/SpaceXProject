@@ -6,15 +6,36 @@ import ItemsList from './ItemsList'
 
 function App() {
 
-  const [fetchedData, setFetchedData] = useState<any>({});
-  const [loading, setLoading] = useState<any>(false);
-  const [error, setError] = useState<any>("");
-  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<any>({});
-  const [favorites, setFavorites] = useState<any>([]);
+  const [fetchedData, setFetchedData] = useState<{
+    mission_name: string;
+    mission_id: integer;
+    launch_date_local: string;
+    launch_site: string;
+    launch_success: boolean;
+    details: string;
+    launch_site: {
+      site_name: string
+    }
+  }>({});
+
+  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<{
+    mission_name: string;
+    mission_id: integer;
+    launch_date_local: string;
+    launch_site: string;
+    launch_success: boolean;
+    details: string;
+    launch_site: {
+      site_name: string
+    }
+  }>({});
+  
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+  const [favorites, setFavorites] = useState<Array>([]);
 
   useEffect(() => {
     fetchData();
-
   }, [])
 
 
@@ -120,7 +141,6 @@ function App() {
           <ItemsList
             fetchedData={fetchedData}
             findOneLaunch={findOneLaunch}
-            // proppedSingleLaunch={proppedSingleLaunch}
           />
           <FavoriteItems
             favorites={favorites}
