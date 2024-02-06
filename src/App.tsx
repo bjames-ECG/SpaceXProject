@@ -34,9 +34,10 @@ function App() {
   //find a launch based on a user selected missionName. Find the index where the missionName exists, update state using the item at the given index
   //sent as a prop to SingleItem
   const findOneLaunch = (missionName) => {
-    const index = fetchedData.findIndex((data) => data.mission_name === missionName);
-
-    setProppedSingleLaunch(fetchedData[index]);
+    if (missionName) {
+      const index = fetchedData.findIndex((data) => data.mission_name === missionName);
+      setProppedSingleLaunch(fetchedData[index]);
+    }
   }
 
 
@@ -44,6 +45,8 @@ function App() {
   //sent as a prop to SingleItem, so that the favorite button can be added to every item.
   const addFavorite = (missionName) => {
     //declare the index based on the missionName, which is based on the user's click
+    if (missionName) {
+
     const index = fetchedData.findIndex((data) => data.mission_name === missionName);
 
     //add the new favorite launch to the exisiting array of favorites
@@ -51,6 +54,7 @@ function App() {
 
     //Part of adding a toast notification
     // addFavoriteNotification();
+    }
   }
 
   //The following addFavoriteNotification and removeFavoriteNotification are part of implementing a toast when favorites are added and removed.
