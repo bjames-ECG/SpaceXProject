@@ -33,19 +33,16 @@ function App() {
 
   //find a launch based on a user selected missionName. Find the index where the missionName exists, update state using the item at the given index
   //sent as a prop to SingleItem
-  const findOneLaunch = (missionName) => {
-    if (missionName) {
+  const findOneLaunch = (missionName: string) => {
       const index = fetchedData.findIndex((data) => data.mission_name === missionName);
       setProppedSingleLaunch(fetchedData[index]);
-    }
   }
 
 
   //add a launch to the favorites array for use in local storage
   //sent as a prop to SingleItem, so that the favorite button can be added to every item.
-  const addFavorite = (missionName) => {
+  const addFavorite = (missionName : string) => {
     //declare the index based on the missionName, which is based on the user's click
-    if (missionName) {
 
     const index = fetchedData.findIndex((data) => data.mission_name === missionName);
 
@@ -54,7 +51,6 @@ function App() {
 
     //Part of adding a toast notification
     // addFavoriteNotification();
-    }
   }
 
   //The following addFavoriteNotification and removeFavoriteNotification are part of implementing a toast when favorites are added and removed.
@@ -83,7 +79,7 @@ function App() {
 
   //function for removing favorite from localstorage
   //sent as a prop to FavoriteItems, to add remove button on all items on Favorites array when rendered.
-  const removeFavorite = (missionName) => {
+  const removeFavorite = (missionName : string) => {
       //declare a variable that will be a filtered version of the favorites array. missionName variable is based on user clicking to remove favorite.
       let removedFavorite = favorites.filter((data) => data.mission_name !== missionName);
 
