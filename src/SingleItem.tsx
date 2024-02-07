@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import "./SingleItem.css";
+import { Data } from './App';
+
+interface Props {
+  proppedSingleLaunch: Data[];
+  addFavorite: (missionName: string) => void;
+  favorites: Data[];
+}
 
 
 
-function SingleItem({ proppedSingleLaunch, addFavorite, favorites }) {
+function SingleItem({ proppedSingleLaunch, addFavorite, favorites } : Props) {
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   // console.log("PROPPED: ", proppedSingleLaunch)
 
@@ -22,7 +29,7 @@ const launchData = () => {
   }
 }
 
-const dateConverter = (utcDate) => {
+const dateConverter = (utcDate : string) => {
   // console.log(new Date(utcDate))
   return new Date(utcDate).toDateString()
 }
