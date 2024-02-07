@@ -23,7 +23,7 @@ function App() {
   const [proppedSingleLaunch, setProppedSingleLaunch] = useState<Data | {}>({});
 
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>("");
+  const [error, setError] = useState<string>("");
   const [favorites, setFavorites] = useState<Data[]>([]);
 
   useEffect(() => {
@@ -82,8 +82,11 @@ function App() {
       const result = await response.json();
       setFetchedData(result);
 
-      let storage : string | null = JSON.parse(localStorage.getItem("Favorites"));
-      if (storage !== null) setFavorites(storage);
+      if (JSON.parse(localStorage.getItem("Favorites")) !== null) {
+        setFavorites(JSON.parse(localStorage.getItem("Favorites")))
+      }
+      // let storage : string = JSON.parse(localStorage.getItem("Favorites"));
+      // if (storage !== null) setFavorites(storage);
 
       setLoading(false);
       // console.log("DATA SET: ", fetchedData)
