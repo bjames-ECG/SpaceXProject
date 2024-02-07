@@ -17,9 +17,9 @@ interface Data {
 
 function App() {
 
-  const [fetchedData, setFetchedData] = useState<Data>({})
+  const [fetchedData, setFetchedData] = useState<Data | {}>({})
 
-  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<Data>({});
+  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<Data | {}>({});
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
