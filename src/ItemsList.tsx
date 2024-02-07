@@ -1,4 +1,10 @@
 import "./ItemsList.css"
+import { Data } from "./App";
+
+interface Props {
+  fetchedData: Data[];
+  findOneLaunch: (missionName: string) => void;
+}
 
 function ItemsList({ fetchedData, findOneLaunch }) {
   // console.log("data from ItemsList: ", fetchedData);
