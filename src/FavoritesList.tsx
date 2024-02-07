@@ -19,7 +19,7 @@ function FavoritesList({ favorites, removeFavorite }) {
         <div id="outer-container">
           Saved Favorites
         <div id="all-launches-box">
-          {favorites && favorites.map((data) => (
+          {favorites && favorites.map((data : any) => (
                 <div id='favorites-individual-launch' key={data.mission_name}>
                     <button onClick={() => removeFavorite(data.mission_name)}>Remove Favorite</button>
                     <div><span id="label-text-font">Flight Number</span>: {data.flight_number}</div>
