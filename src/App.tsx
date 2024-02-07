@@ -23,7 +23,7 @@ function App() {
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const [favorites, setFavorites] = useState<any>([]);
+  const [favorites, setFavorites] = useState<Array>([]);
 
   useEffect(() => {
     fetchData();
