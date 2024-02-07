@@ -6,7 +6,7 @@ interface Props {
   findOneLaunch: (missionName: string) => void;
 }
 
-function ItemsList({ fetchedData, findOneLaunch }) {
+function ItemsList({ fetchedData, findOneLaunch } : Props) {
   // console.log("data from ItemsList: ", fetchedData);
 
 
