@@ -25,7 +25,7 @@ function App() {
 
   const [fetchedData, setFetchedData] = useState<Data[]>([]);
 
-  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<Data | {}>({});
+  const [proppedSingleLaunch, setProppedSingleLaunch] = useState<Data | null>(null); // Initialize with null
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
