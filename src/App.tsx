@@ -82,7 +82,7 @@ function App() {
       const result = await response.json();
       setFetchedData(result);
 
-      let storage = JSON.parse(localStorage.getItem("Favorites"));
+      let storage : number | null = JSON.parse(localStorage.getItem("Favorites"));
       if (storage !== null) setFavorites(storage);
 
       setLoading(false);
