@@ -34,18 +34,14 @@ function App() {
   //find a launch based on a user selected missionName. Find the index where the missionName exists, update state using the item at the given index
   //sent as a prop to SingleItem
   const findOneLaunch = (missionName: string) => {
-    if (fetchedData.mission_name) {
       const index = fetchedData.findIndex((data) => data.mission_name === missionName);
       setProppedSingleLaunch(fetchedData[index]);
-    }
   }
 
 
   const addFavorite = (missionName : string) => {
-    if (fetchedData.mission_name) {
       const index = fetchedData.findIndex((data) => data.mission_name === missionName);
       setFavorites([...favorites, fetchedData[index]]);
-    }
     // addFavoriteNotification();
   }
 
