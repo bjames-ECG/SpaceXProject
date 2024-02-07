@@ -17,7 +17,9 @@ function ItemsList({ fetchedData, findOneLaunch }) {
         <div>Choose a Mission Name</div>
         <div id="all-launches-box">
           <div id="launches-list">
-          {fetchedData.map((data) => (
+          {fetchedData.map((data : {
+            mission_name : string;
+          }) => (
                 <div id='individual-launch' key={data.mission_name} onClick={() => findOneLaunch(data.mission_name)}>
                     <div id="mission-name-text">{data.mission_name}</div>   
                 </div>
