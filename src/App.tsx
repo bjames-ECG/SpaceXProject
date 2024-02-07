@@ -23,7 +23,7 @@ function App() {
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const [favorites, setFavorites] = useState<Array>([]);
+  const [favorites, setFavorites] = useState<Array<[]>>([]);
 
   useEffect(() => {
     fetchData();
@@ -33,13 +33,13 @@ function App() {
 
   //find a launch based on a user selected missionName. Find the index where the missionName exists, update state using the item at the given index
   //sent as a prop to SingleItem
-  const findOneLaunch = (missionName: string) => {
+  const findOneLaunch = (missionName: any) => {
       const index = fetchedData.findIndex((data) => data.mission_name === missionName);
       setProppedSingleLaunch(fetchedData[index]);
   }
 
 
-  const addFavorite = (missionName : string) => {
+  const addFavorite = (missionName : any) => {
       const index = fetchedData.findIndex((data : any) => data.mission_name === missionName);
       setFavorites([...favorites, fetchedData[index]]);
     // addFavoriteNotification();
@@ -66,7 +66,7 @@ function App() {
   //   setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
   // }
 
-  const removeFavorite = (missionName : string) => {
+  const removeFavorite = (missionName : any) => {
       let removedFavorite = favorites.filter((data) => data.mission_name !== missionName);
       setFavorites(removedFavorite);
       localStorage.setItem("Favorites", JSON.stringify(removedFavorite));
