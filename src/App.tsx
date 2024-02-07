@@ -4,15 +4,20 @@ import SingleItem from './SingleItem'
 import FavoriteItems from './FavoritesList'
 import ItemsList from './ItemsList'
 
-interface Data {
+export interface Data {
   mission_name: string;
-  mission_id: number;
-  launch_date_local: string;
-  launch_success: boolean;
+  flight_number: number;
   details: string;
+  launch_date_local: string;
   launch_site: {
-    site_name: string
-  }
+    site_name: string;
+  };
+  launch_success: boolean;
+  launch_failure_details?: {
+    reason: string;
+    altitude: number;
+    time: number;
+  };
 }
 
 function App() {

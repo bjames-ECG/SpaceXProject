@@ -1,21 +1,6 @@
 import { useEffect } from 'react';
 import "./FavoritesList.css";
-
-interface Data {
-  mission_name: string;
-  flight_number: number;
-  details: string;
-  launch_date_local: string;
-  launch_site: {
-    site_name: string;
-  };
-  launch_success: boolean;
-  launch_failure_details?: {
-    reason: string;
-    altitude: number;
-    time: number;
-  };
-}
+import { Data } from './App';
 
 interface Props {
   favorites: Data[];
