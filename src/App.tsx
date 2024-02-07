@@ -82,11 +82,8 @@ function App() {
       const result = await response.json();
       setFetchedData(result);
 
-      if (JSON.parse(localStorage.getItem("Favorites")) !== null) {
-        setFavorites(JSON.parse(localStorage.getItem("Favorites")))
-      }
-      // let storage : string = JSON.parse(localStorage.getItem("Favorites"));
-      // if (storage !== null) setFavorites(storage);
+      const storage = JSON.parse(localStorage.getItem("Favorites") || '[]') as Data[];
+      if (storage !== null) setFavorites(storage);
 
       setLoading(false);
       // console.log("DATA SET: ", fetchedData)
